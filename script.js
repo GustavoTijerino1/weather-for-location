@@ -1,6 +1,11 @@
 // − 273.15) × 9/5 + 32 temp
 //  get items from the objects
 
+
+
+var hstrList = document.createElement('li');
+
+var searchedCitys= []
 let sbmtBttn = document.getElementById('sbmt')
 var apiKey= 'aba392ccda7fe400f92ed7fab594a456';
 
@@ -20,29 +25,17 @@ console.log(pickCity.value);
     .then(function (data) {
       console.log(data)
       
- 
-      
     });
 }
 
 
 
+sbmtBttn.addEventListener('click', function handleFormSubmit(event) { 
 
-var hstrList = document.createElement('li');
-
-var searchedCitys= []
-
-function handleFormSubmit(event) {
   event.preventDefault();
   
   var pickCity = document.getElementsByName('pick')[0].value
   getApi();
-  // select form element by its `name` attribute and get its value
-  // if there's nothing in the form entered, don't print to the page
-  // if (!pickCity) {
-    //   console.log('No City filled out in form!');
-    //   return;
-    // }
     
     const srchHistory = document.getElementById('srchHistory')
 
@@ -57,10 +50,9 @@ function handleFormSubmit(event) {
     
     grabMyList()
     
-  }
+  });
   
- sbmtBttn.addEventListener('click', handleFormSubmit)
-
+  
   function grabMyList(event) {
     // event.preventDefault()
 
