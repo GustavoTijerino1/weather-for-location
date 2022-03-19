@@ -14,19 +14,57 @@ var apiKey= 'aba392ccda7fe400f92ed7fab594a456';
 
 function getApi() {
   
-  // fetch request gets a list of all the repos for the node.js organization
   var requestUrl =
-  `https://api.openweathermap.org/data/2.5/weather?q=${pickCity.value}&appid=${apiKey}`;
+  `https://api.openweathermap.org/data/2.5/weather?q=${pickCity.value}&units=imperial&appid=${apiKey}`;
 console.log(pickCity.value);
   fetch(requestUrl)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data)
+      console.log(data);
+      // const uvI = data.uvi;
+      // console.log(uvI);
+      const {name} = data;
+      const {icon, description} = data.weather[0];
+      const {temp} = data.main;
+      const {humidity} = data.main;
+      const {speed} = data.wind;
+      // console.log(name,icon, description,temp, humidity,speed);
+      
+      // console.log(newTemp);
+      
+      document.querySelector('#currentCity').textContent = name;
+      document.querySelector('.icon').src="https://openweathermap.org/img/wn/"+ icon + ".png"
+      document.querySelector('.description').textContent.toUpperCase = description;
+      document.querySelector('.temp').textContent= temp;
+      document.querySelector('.humidity').textContent = humidity;
+      document.querySelector('.wind').textContent = speed;
+
+      
+      // data.day.forEach(element => {
+        
+      // });
       
     });
-}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

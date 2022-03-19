@@ -16,7 +16,11 @@ body {
 }
 #searchBox{
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+#box {
+    padding: 10px;
 }
 .card {
     text-decoration: underline;
@@ -37,6 +41,10 @@ body {
     justify-content: center;
     flex-flow: row;
     margin: 10px;
+}
+
+#fiveDay {
+    padding: 10px;
 }
 /* 
 #currentPlace {
