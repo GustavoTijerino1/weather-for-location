@@ -39,20 +39,19 @@ body {
 #futureCast {
     display: flex;
     justify-content: center;
-    flex-flow: row;
+    flex-flow: row wrap;
     margin: 10px;
 }
+h3{
+    border: 10px solid black;
+    width: fit-content;
+    height: fit-content;
+    background-color: azure;
+    padding: 5px;
+}
 
-#fiveDay {
+.li-update {
+    list-style: none;
     padding: 10px;
 }
-/* 
-#currentPlace {
-    display: flex;
-   
- /* flex-flow: column ; */
-    /* justify-content: center;
-   position: absolute;
-} */
-    
 
