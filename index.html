@@ -5,6 +5,7 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+            
             <link rel="stylesheet" href="main.css">
             <title>Weather?</title>
     </head>
@@ -16,17 +17,15 @@
         <main>  
             <section id="searchBox">
                 <div id="box"  class="card">
-                <form id="cityName">
-                    <label for="pickCity"><h2>Type a City name</h2></label>
-                    <input  type="text" name="pick" id="pickCity" value="">
-                    <button type="submit" id="sbmt">Submit</button>
-                </form>
+                  <form id="cityName">
+                      <label for="pickCity"><h2>Type a City name</h2></label>
+                      <input  type="text" name="pickCity" id="pickCity" placeholder="San Antonio" value="">
+                      <button type="submit" id="sbmt">Submit</button>
+                  </form>
 
-                <ul id="srchHistory"> </ul>
+                  <ul id="srchHistory"> </ul>
                 </div>
-                <!-- </section> -->
-                
-                <!-- <section id="currentPlace"> -->
+              
                 <div id="currentInfo" class="card">
                         <div class="card-body">
                             <h2 id="currentCity">City</h2>
@@ -62,7 +61,6 @@
               <h3>5-Day Forecast</h3>
 
                 <div id="fiveDay" >
-                    </div>
                     <div id="forecast" class="row mediaquery cards"></div>
                   </div>
                 </section>
@@ -72,10 +70,9 @@
 
         </main>
  
-         <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     
     <!-- Moment.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-        <script src="./script.js"></script>
+    <script src="./script.js"></script>
     </body>
 </html>
